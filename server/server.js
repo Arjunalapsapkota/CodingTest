@@ -9,11 +9,7 @@ const cors = require("cors");
 app.use(cors());
 app.use("*", function(req, res, next) {
   //to deal with cors
-  res.header(
-    "Access-Control-Allow-Origin",
-    "http://localhost:3000",
-    "https://coding-test01.herokuapp.com"
-  );
+  res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
   res.header("Access-Control-Allow-Headers", "Content-Type");
   res.header("Access-Control-Allow-Credentials", true);
