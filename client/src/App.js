@@ -22,7 +22,7 @@ class App extends Component {
     // i.e. we check the local storage and make an api call if needed
     // In real apllication we also save the list in database , user can access from any device, but for now lets make it simple
     if (!this.props.store.data)
-      fetch(apiUrl, { method: "GET", mode: "cors" })
+      fetch(apiUrl, { method: "GET", mode: "no-cors" })
         .then(res => {
           return res.json();
         })
