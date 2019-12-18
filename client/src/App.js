@@ -50,19 +50,19 @@ class App extends Component {
       <React.Fragment>
         <Navbar />
         {this.props.store.data ? (
-          <RowList lists={this.props.store.data.mylist} name="My List" />
-        ) : null}
-        {this.props.store.data ? (
-          <RowList
-            lists={this.props.store.data.recommendations}
-            name="Recommendations"
-          />
-        ) : null}
-        <footer className="container footer">
-          <h5 className="footerText">My movies List:</h5>
+          <React.Fragment>
+            <RowList lists={this.props.store.data.mylist} name="My List" />
+            <RowList
+              lists={this.props.store.data.recommendations}
+              name="Recommendations"
+            />
+            <footer className="container footer">
+              <h5 className="footerText">My movies List:</h5>
 
-          <Footer mylist={this.props.store.data.mylist} />
-        </footer>
+              <Footer mylist={this.props.store.data.mylist} />
+            </footer>
+          </React.Fragment>
+        ) : null}
       </React.Fragment>
     );
   }

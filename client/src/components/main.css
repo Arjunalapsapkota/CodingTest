@@ -19,7 +19,7 @@ body {
 .btn {
   position: relative;
   width: 100%;
-
+  z-index: 15;
   display: none;
 }
 .box {
