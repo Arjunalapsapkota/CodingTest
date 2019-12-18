@@ -47,7 +47,15 @@ img:hover + .btn {
 .btn:hover > img {
   opacity: 0.5;
 }
-
+.footer {
+  display: flex;
+  margin-top: 2em;
+  background-color: #343a40;
+  bottom: 0%;
+}
+.footerText {
+  margin: 1em;
+}
 /* .btn {
   position: absolute;
   width: 7em;
@@ -68,3 +76,17 @@ img:hover + .btn {
   display: inline-block;
 }
  */
+@media (max-width: 1440px) {
+  .RowList {
+    height: 13.5em;
+    margin-top: 0.25em;
+    padding: 0.25em;
+  }
+  .box {
+    width: 6em;
+    height: 8em;
+  }
+  .movieImage {
+    width: 6em;
+  }
+}

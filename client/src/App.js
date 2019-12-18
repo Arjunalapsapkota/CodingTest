@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./App.css";
-import { Navbar, RowList } from "./components"; // import components
+import { Navbar, RowList, Footer } from "./components"; // import components
 
 //URL has been edited to run both in local machine and production
 const apiUrl =
@@ -58,6 +58,11 @@ class App extends Component {
             name="Recommendations"
           />
         ) : null}
+        <footer className="container footer">
+          <h5 className="footerText">My movies List:</h5>
+
+          <Footer mylist={this.props.store.data.mylist} />
+        </footer>
       </React.Fragment>
     );
   }

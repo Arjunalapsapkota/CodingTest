@@ -7,7 +7,7 @@ const image = require("../image/logo.png");
 class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-dark bg-dark">
+      <nav className="navbar navbar-dark bg-dark ">
         <a className="navbar-brand" href="/">
           <img src={image} className="logo" alt="brand logo" />
         </a>
