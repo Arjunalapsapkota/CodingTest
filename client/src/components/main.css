@@ -1,0 +1,70 @@
+.RowList {
+  margin-top: 0.5em;
+  height: 20em;
+  background-color: #3f4246;
+
+  padding: 0.5em;
+}
+.RowListFlex {
+  display: flex;
+  flex-direction: row;
+}
+body {
+  color: rgb(199, 193, 193);
+}
+.movieImage {
+  transform: scale(1);
+  margin-left: 2.5em;
+}
+.btn {
+  position: relative;
+  width: 100%;
+
+  display: none;
+}
+.box {
+  z-index: 15;
+  width: 10em;
+  height: 10em;
+}
+img {
+  width: 100%;
+}
+.btn,
+.box {
+  margin-left: 2.5em;
+}
+img:hover {
+  opacity: 0.5;
+}
+img:hover + .btn {
+  display: inline-block;
+}
+
+.btn:hover {
+  display: inline-block;
+}
+.btn:hover > img {
+  opacity: 0.5;
+}
+
+/* .btn {
+  position: absolute;
+  width: 7em;
+  margin-left: -8.7em;
+  margin-top: 12em;
+
+  display: none;
+}
+.box {
+  z-index: 15;
+}
+
+img:hover + .btn {
+  display: inline-block;
+}
+
+.btn:hover {
+  display: inline-block;
+}
+ */
