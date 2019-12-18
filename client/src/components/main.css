@@ -1,7 +1,7 @@
 .RowList {
   margin-top: 0.5em;
   height: 20em;
-  background-color: #3f4246;
+  /* background-color: #3f4246; */
 
   padding: 0.5em;
 }
@@ -50,7 +50,7 @@ img:hover + .btn {
 .footer {
   display: flex;
   margin-top: 2em;
-  background-color: #343a40;
+  /* background-color: #343a40; */
   bottom: 0%;
 }
 .footerText {
