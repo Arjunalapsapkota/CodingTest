@@ -3,7 +3,12 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./App.css";
 import { Navbar, RowList } from "./components"; // import components
-const apiUrl = "http://localhost:3090/api"; // Api URL
+
+//URL has been edited to run both in local machine and production
+const apiUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://birdiez.herokuapp.com/api"
+    : "http://localhost:3090/api";
 
 class App extends Component {
   state = { mylist: null, recommendations: null };
