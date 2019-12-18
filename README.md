@@ -5,15 +5,16 @@
 # Technologis :
 
  ## Backend
- Nodejs
+ Nodejs,
  Express 
  
  ## frontend
- React
- React-Redux
- Redux
- Bootstrap
- HTML
+ React,
+ React-Redux,
+ Redux,
+ Bootstrap,
+ HTML,
  CSS
-To Do: 
+
+# To Do: 
 - Modification to the Css to make it responsive
