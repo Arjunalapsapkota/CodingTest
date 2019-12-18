@@ -7,7 +7,7 @@ import { Navbar, RowList } from "./components"; // import components
 //URL has been edited to run both in local machine and production
 const apiUrl =
   process.env.NODE_ENV === "production"
-    ? "https://birdiez.herokuapp.com/api"
+    ? "https://coding-test01.herokuapp.com/api"
     : "http://localhost:3090/api";
 
 class App extends Component {
