@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./App.css";
-import { Navbar, RowList, Footer } from "./components"; // import components
+import { Navbar, RowList } from "./components"; // import components
 
 //URL has been edited to run both in local machine and production
 const apiUrl =
@@ -48,18 +48,29 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
+        {/* Navbar */}
         <Navbar />
+        {/* body */}
         {this.props.store.data ? (
           <React.Fragment>
-            <RowList lists={this.props.store.data.mylist} name="My List" />
+            <RowList
+              lists={this.props.store.data.mylist}
+              name="My List"
+              keyprops={this.props}
+            />
             <RowList
               lists={this.props.store.data.recommendations}
               name="Recommendations"
+              keyprops={this.props}
             />
+            {/* footer section */}
             <footer className="container footer">
               <h5 className="footerText">My movies List:</h5>
-
-              <Footer mylist={this.props.store.data.mylist} />
+              {this.props.store.data.mylist.map(item => (
+                <h5 className="footerText" key={item.id}>
+                  {item.title}
+                </h5>
+              ))}
             </footer>
           </React.Fragment>
         ) : null}
@@ -81,6 +92,12 @@ const mapDispatchToProps = dispatch => {
         type: "update",
         payload: data
       });
+    },
+    updateMyList: data => {
+      dispatch({ type: "updateMyList", payload: data });
+    },
+    updateRecommendations: data => {
+      dispatch({ type: "updateRecommendations", payload: data });
     }
   };
 };
